@@ -1,0 +1,39 @@
+Um pesquisador colega seu está estudando e tentando entender a resposta imune à uma infecção viral
+no tecido pulmonar. A partir dos experimentos realizados, ele observou que o vírus infecta as células
+epiteliais do pulmão (células que revestem o pulmão), ou seja, o vírus consegue entrar nessas células. Após a
+entrada dos vírus nas células, ele começa a se replicar e, após um tempo, a célula acaba morrendo e liberando
+todas as partículas de vírus que estão dentro dela. Ele observou também que uma célula do sistema imune
+fundamental para controlar a infecção é chamada célula T e essa célula é a responsável por matar as células
+infectadas, impedindo dessa forma que os vírus continuem se replicando e que sejam liberados no tecido
+causando mais infecção.
+A partir dessas observações, seu colega formulou o seguinte conjunto de equações diferenciais
+ordinárias (EDOs) para tentar reproduzir os comportamentos observados durante essa infecção viral. Ele
+definiu as seguintes variáveis: V para representar o vírus, E para representar as células epiteliais saudáveis, I
+para representar as células epiteliais infectadas e T para representar as células de defesa do sistema imune.
+Para cada uma dessas variáveis, foi criada uma EDO para tentar reproduzir a dinâmica de cada tipo de
+célula/molécula ao longo do tempo. O sistema de EDOs é dado abaixo:
+
+dE/dt = - b.E.V
+dI/dt = b.E.V - k.I.T - a.I
+dV/dt = p.a.I - k2.V
+dT/dt = s.I - m.T
+
+Obs: dE/dt representa a variação de E a cada passo de tempo, dI/dt representa a variação de I a cada passo e,
+assim por diante.
+
+A explicação de cada termo é dada abaixo:
+• b.E.V: Infecção das células epiteliais pelo vírus
+• k.I.T: Eliminação das células infectadas pela célula T
+• p.a.I: Morte das células infectadas devido a ação do vírus e liberação dos vírus
+• k2.V: Morte dos vírus livres devido a ação de outras células do sistema imune (como anticorpos)
+• s.I: Migração das células T para o tecido atraídas pela infecção
+• m.T: Morte natural das células T
+
+A descrição de cada parâmetro é dada abaixo:
+• b: Taxa de infecção das células epiteliais
+• k: Taxa de eliminação das células infectadas
+• a: Taxa de morte das células infectadas
+• p: Taxa de liberação de vírus pelas células infectadas
+• k2: Taxa de eliminação de vírus livres
+• s: Taxa de migração das células T
+• m: Taxa de morte das células T
